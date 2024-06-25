@@ -1,23 +1,20 @@
-const fs = require('fs');
-const http = require('http');
-const { stringify } = require('querystring');
-const url = require('url');
+const express = require('express');
 
-const server=http.createServer((req,res)=>{
- 
-    const myURL = url.parse((req.url));
-    // console.log(myURL, " is my URL");
-    console.log(myURL.path);
+const app = express();
 
-    console.log(req.method);
+app.get('/home',(req,res)=>{
+    // console.log(req.path);
+    res.json("you are at "+ req.path);
 
+});
+
+app.get('',(req,res)=>{
+    // console.log(req.path);
+    res.end("you are at "+ req.path);
     
-    res.end("path in address bar is "+ myURL.path);
-   
-})
+});
 
-server.listen(8000,()=>{
-    
-    console.log("running..............");
 
+app.listen(8000,()=>{
+    console.log("running\n");
 })

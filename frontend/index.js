@@ -1,8 +1,9 @@
-const { stringify } = require("querystring");
+
+
 
 async function getNishan() {
-    const x = await fetch("http://localhost:8000/getNishan");
+    let x = await fetch("http://localhost:8000/home");
     x= await x.json();
-    console.log(stringify(x));
+    console.log(x);
     
 }
