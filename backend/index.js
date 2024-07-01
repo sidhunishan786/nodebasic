@@ -2,6 +2,7 @@ const express = require('express');
 const data = require('./MOCK_DATA.json');
 const app = express();
 
+
 app.get('/api/users',(req,res)=>{
     // console.log(req.path);
     // const html = `${data.map((curr)=> "<h1> first Name - "+curr.first_name+"</h1>").join("")}`;
