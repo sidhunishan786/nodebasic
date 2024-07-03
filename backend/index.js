@@ -20,7 +20,7 @@ app.use(express.json({ extended: true }));
 
 app.use('/user',Router);
 app.get('',(req,res)=>{
-    // console.log(req.path);
+
     res.end("you are at HOME");
     
 });
